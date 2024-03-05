@@ -1,0 +1,16 @@
+RewriteEngine On
+
+    #Accueil 
+
+    #Traitement 
+    RewriteRule ^traitementClint$ traitement/client.php
+    RewriteRule ^traitementBillett$ traitement/billet.php
+
+
+    #model
+    RewriteRule ^serviceBD$ model/service_db.php
+    RewriteRule ^userBD$ model/user_db.php
+
+    #view => 
+    RewriteRule ^listeClient$ /clients/index.php
+    RewriteRule ^listeBillet$ /billets/index.php
