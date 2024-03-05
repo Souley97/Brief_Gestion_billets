@@ -12,5 +12,5 @@ RewriteEngine On
     RewriteRule ^userBD$ model/user_db.php
 
     #view => 
-    RewriteRule ^listeClient$ /clients/index.php
+    RewriteRule ^listeClient$ /clients
     RewriteRule ^listeBillet$ /billets/index.php
