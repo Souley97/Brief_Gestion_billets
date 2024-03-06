@@ -1,6 +1,6 @@
 <!-- <?php
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'gestion_billet');
+define('DB_NAME', 'cli');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 function connect()

@@ -160,6 +160,23 @@ VALUES (NOW(), NOW(), NOW(), 'En cours', :id_client, :id_billet)";
 
                             <div class="mb-3">
                                 <label for="idBillet" class="form-label">ID Billet</label>
+                                <select name="id_categorie" class="input100" required>
+
+                                    <?php
+                                    require_once '../db.php';
+                                    $conn = connect(); // Assurez-vous de définir la connexion avant de l'utiliser
+                                    
+                                    $query_categories = "SELECT id, titre FROM Categorie";
+                                    $result_categories = $conn->query($query_categories);
+                                    $categories = $result_categories->fetchAll(PDO::FETCH_ASSOC);
+
+                                    foreach ($categories as $categorie): ?>
+                                        <option value="<?= $categorie['id'] ?>">
+                                            <?= $categorie['titre'] ?>
+                                        </option>
+
+                                    <?php endforeach; ?>
+                                </select>
                                 <input type="number" class="form-control" id="idBillet" name="id_billet" required>
                             </div>
                             <button type="submit" class="btn btn-primary">Ajouter réservation</button>
