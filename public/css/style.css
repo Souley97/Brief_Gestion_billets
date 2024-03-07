@@ -2,11 +2,12 @@
 .navbar-nav {
     width: 100%;
     text-align: center;
+    margin-left: 53vh;
 }
 
 .navbar-nav .nav-item {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 30px;
 }
 
 .navbar-nav .nav-link {
@@ -43,3 +44,45 @@
     max-width: 100%;
     height: auto;
 }
+
+.card {
+    background: #3011BC;
+    color: #FE7A15;
+    border: 1px solid #FE7A15;
+    border-radius: 10px;
+} .card2 {
+    background: #3011BC;
+    color: #3011BC;
+    border: 1px solid #FE7A15;
+    border-radius: 10px;
+}
+
+    .navbar {
+        background: #FE7A15;
+        color: #3011BC;
+        border: 1px solid #FE7A15;
+        border-radius: 10px;
+    }
+
+ .top {
+        margin-top: 12vh;
+    }
+
+    .card-title span {
+        color: #231a12;
+        font-weight: bold;
+    }
+
+
+    strong {
+        color: #3011BC;
+        font-weight: bold;
+    }
+
+    .card-subtitle {
+        color: #000000;
+    }
+
+    .card-text {
+        color: #000000;
+    }

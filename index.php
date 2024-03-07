@@ -30,106 +30,137 @@ require_once("partials/head.php");
                     Clients
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="l">
-                    <i class="fa fa-calendar"></i>
-                    Les Réservations
-                </a>
-            </li>
+
         </ul>
     </div>
 </nav>
-<!-- Contenu de la page -->
-<div class="container p mt-5">
+<style>
+    body {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(14.4px);
+        -webkit-backdrop-filter: blur(14.4px);
+        border: 1px solid rgba(255, 255, 255, 0.82);
+        color: #FE7A15;
+    }
 
+    .container {
+        padding-top: 50px;
+    }
 
-    <h1>Bienvenue sur la Plateforme de Réservation de Billets</h1>
+    .banner {
+        /* Remplacez par le chemin de votre image de bannière */
+        background-size: cover;
+        color: #FE7A15;
+        text-align: center;
+        padding: 100px 0;
+        margin-bottom: 30px;
+    }
 
-    <!-- Système d'affichage des réservations sous forme de cartes (cards) -->
-    <div class="card-group">
-        <div class="card">
-            <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Titre de la Réservation</h5>
-                <p class="card-text">Informations sur la réservation.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Titre de la Réservation</h5>
-                <p class="card-text">Informations sur la réservation.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Titre de la Réservation</h5>
-                <p class="card-text">Informations sur la réservation.</p>
-            </div>
-        </div>
-    </div>
-</div>
+    .proposals,
+    .services,
+    .offers {
+        background: #3011BC;
+        color: #FE7A15;
+        border: 1px solid #FE7A15;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+        /* From https://css.glass */
+        background: #FE7A15;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(14.4px);
+        -webkit-backdrop-filter: blur(14.4px);
+        border: 1px solid rgba(255, 255, 255, 0.82);
+    }
 
-<div class="container mt-5">
-    <h2>Ajouter une réservation</h2>
+    .card {
+        background: #3011BC;
+        color: #FE7A15;
+        border: 1px solid #FE7A15;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
 
-    <!-- Bouton pour ouvrir le modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservationModal">
-        Ajouter une réservation
-    </button>
+    .card-title span {
+        color: #FE7A15;
+        font-weight: bold;
+    }
 
-    <!-- Modal -->
-    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ajouter une réservation</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    .card-subtitle {
+        color: #FE7A15;
+    }
+
+    .card-text {
+        color: #FE7A15;
+    }
+
+    .btn-primary {
+        background-color: #FE7A15;
+        color: #3011BC;
+        border: 1px solid #FE7A15;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Bannière -->
+        <section class="banner">
+            <h1>Bienvenue sur Sen DEM DIKK</h1>
+            <p>Un voyage à l'intérieur du Sénégal ?</p>
+        </section>
+
+        <!-- Proposer -->
+        <section class="proposals">
+            <h2 class="text-center mb-4">Voyages Découvertes</h2>
+            <h2 class="text-center mb-4"><a href="clients/index.php" class=" btn btn-primary">Reservation</a></h2>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Proposition 1 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="public/images/800px-Bus.svg.png" class="card-img-top" alt="Image de la proposition 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Aventures Extrêmes</h5>
+                            <p class="card-text">Offrez-vous une pause bien méritée avec nos séjours relaxants.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <!-- Formulaire d'ajout de réservation -->
-                    <form method="post" action="ajouter_reservation.php">
-                        <div class="mb-3">
-                            <label for="dateReservation" class="form-label">Date de réservation</label>
-                            <input type="date" class="form-control" id="dateReservation" name="date_reservation"
-                                required>
+
+                <!-- Proposition 2 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="public/images/800px-Bus.svg.png" class="card-img-top" alt="Image de la proposition 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Aventures Extrêmes</h5>
+                            <p class="card-text">pour les amateurs de sensations fortes, nos aventures extrêmes vous
+                                réservent des défis palpitants. </p>
                         </div>
-                        <div class="mb-3">
-                            <label for="dateDepart" class="form-label">Date de départ</label>
-                            <input type="date" class="form-control" id="dateDepart" name="date_depart" required>
+                    </div>
+                </div>
+
+                <!-- Proposition 3 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="public/images/800px-Bus.svg.png" class="card-img-top" alt="Image de la proposition 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Séjours Relaxants</h5>
+                            <p class="card-text">Offrez-vous une pause bien méritée avec nos séjours relaxants</p>
                         </div>
-                        <div class="mb-3">
-                            <label for="heureDepart" class="form-label">Heure de départ</label>
-                            <input type="time" class="form-control" id="heureDepart" name="heure_depart" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="statut" class="form-label">Statut</label>
-                            <select class="form-select" id="statut" name="statut" required>
-                                <option value="En cours">En cours</option>
-                                <option value="Passé">Passé</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="idClient" class="form-label">ID Client</label>
-                            <input type="number" class="form-control" id="idClient" name="id_client" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="idBillet" class="form-label">ID Billet</label>
-                            <input type="number" class="form-control" id="idBillet" name="id_billet" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Ajouter réservation</button>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        </section>
 
 
-<?php
 
-require_once("partials/footer.php");
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-?>
+</html>
+<?php require_once("partials/footer.php"); ?>
